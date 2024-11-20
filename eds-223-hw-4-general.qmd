@@ -94,7 +94,8 @@ x_depth <- classify(depth_new, x_depth_rcl)
 
 ```{r}
 #use map algebra to find suitable locations
-x_locations <- x_sst * x_depth
+fun <- function(x, y){x*y}
+x_locations <- lapp(c(x_sst, x_depth), fun=fun)
 ```
 
 ### Calculate Suitable Area for Each EEZ
@@ -188,7 +189,8 @@ x_depth <- classify(depth_new, x_depth_rcl)
 
 ```{r}
 #use map algebra to find suitable locations
-x_locations <- x_sst * x_depth
+fun <- function(x, y){x*y}
+x_locations <- lapp(c(x_sst, x_depth), fun=fun)
 ```
 
 ### Calculate Suitable Area for Each EEZ
