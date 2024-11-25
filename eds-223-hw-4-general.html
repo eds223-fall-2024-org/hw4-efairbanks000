@@ -225,7 +225,8 @@ Geodetic CRS:  WGS 84</code></pre>
 <h3 class="anchored" data-anchor-id="find-suitable-locations">Find Suitable Locations</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#use map algebra to find suitable locations</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>x_locations <span class="ot">&lt;-</span> x_sst <span class="sc">*</span> x_depth</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>fun <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){x<span class="sc">*</span>y}</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>x_locations <span class="ot">&lt;-</span> <span class="fu">lapp</span>(<span class="fu">c</span>(x_sst, x_depth), <span class="at">fun=</span>fun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="calculate-suitable-area-for-each-eez" class="level3">
@@ -361,7 +362,8 @@ Geodetic CRS:  WGS 84</code></pre>
 <h3 class="anchored" data-anchor-id="find-suitable-locations-1">Find Suitable Locations</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#use map algebra to find suitable locations</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>x_locations <span class="ot">&lt;-</span> x_sst <span class="sc">*</span> x_depth</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>fun <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){x<span class="sc">*</span>y}</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>x_locations <span class="ot">&lt;-</span> <span class="fu">lapp</span>(<span class="fu">c</span>(x_sst, x_depth), <span class="at">fun=</span>fun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="calculate-suitable-area-for-each-eez-1" class="level3">
